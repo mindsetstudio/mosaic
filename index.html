@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fancywork</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="controls">
+        <label for="imageInput" class="file-input-label">
+          Load Image
+          <input type="file" id="imageInput" accept="image/*" hidden />
+        </label>
+
+        <div class="texture-select-container">
+          <label for="textureSelect">Texture</label>
+          <select id="textureSelect"></select>
+        </div>
+
+        <label for="textureInput" class="file-input-label">
+          Upload Texture
+          <input type="file" id="textureInput" accept="image/*" hidden />
+        </label>
+
+        <div class="slider-container">
+          <div class="slider-wrapper">
+            <label for="pixelSize">Grid size</label>
+            <span id="pixelSizeValue">15</span>
+          </div>
+          <input type="range" id="pixelSize" min="5" max="50" value="15" />
+        </div>
+
+        <button id="downloadBtn" class="download-btn">Export</button>
+      </div>
+
+      <div class="canvas-container">
+        <canvas id="resultCanvas"></canvas>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
